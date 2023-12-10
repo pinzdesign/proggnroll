@@ -30,7 +30,7 @@ import NavigationMenu from "./NavigationMenu.astro";
     h2 {
         font-size: 48px;
         font-family: 'Monomaniac One', sans-serif;
-        letter-spacing: 10px;
+        letter-spacing: 15px;
         text-shadow: 0px 0px 5px white;
     }
     h3 {
@@ -40,26 +40,25 @@ import NavigationMenu from "./NavigationMenu.astro";
         text-shadow: 1px 1px 3px black;
     }
     .newest_box {
-        width: 50%;
         margin: 200px auto;
         display: flex;
-        gap: 50px;
-        justify-content: space-evenly;
+        gap: 30px;
+        justify-content: center;
         align-items: center;
         text-align: right;
-    }
-    .newest_img {
-        width: 150px;
-        height: 150px;
-        box-shadow: 0px 0px 15px white;
-        transform: skew(-0.06turn, 18deg);
-        transition: all .3s;
     }
     .newest_img img {
         width: 150px;
         height: 150px;
     }
-    .newest_img:hover {
+    .newest_img {
+        width: 150px;
+        height: 150px;
+        box-shadow: 0px 0px 15px white;
         transform: skew(0);
+        transition: all .3s;
+    }
+    .newest_img:hover {
+        transform: skew(-0.06turn, 18deg);
     }
 </style>
