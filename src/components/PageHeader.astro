@@ -1,0 +1,65 @@
+---
+import NavigationMenu from "./NavigationMenu.astro";
+---
+
+<header>
+    <NavigationMenu></NavigationMenu>
+    <div class="banner">
+        <div class="newest_box">
+            <div class="newest_caption">
+                <h2>Meaning of Life</h2>
+                <h3>liluzio</h3>
+            </div>
+            <div class="newest_img">
+                <img src="img/cover1.jpg" alt="newest_release">
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+    header {
+        width: 100%;
+        height: 100vh;
+        background-image: url('img/fractal5_banner.webp');
+        background-size: cover;
+        background-position: bottom left;
+    }
+    .banner {
+    }
+    h2 {
+        font-size: 48px;
+        font-family: 'Monomaniac One', sans-serif;
+        letter-spacing: 10px;
+        text-shadow: 0px 0px 5px white;
+    }
+    h3 {
+        font-size: 36px;
+        font-family: 'Montserrat Alternates', sans-serif;
+        letter-spacing: 10px;
+        text-shadow: 1px 1px 3px black;
+    }
+    .newest_box {
+        width: 50%;
+        margin: 200px auto;
+        display: flex;
+        gap: 50px;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: right;
+    }
+    .newest_img {
+        width: 150px;
+        height: 150px;
+        box-shadow: 0px 0px 15px white;
+        transform: skew(-0.06turn, 18deg);
+        transition: all .3s;
+    }
+    .newest_img img {
+        width: 150px;
+        height: 150px;
+    }
+    .newest_img:hover {
+        transform: skew(0);
+    }
+</style>
