@@ -28,14 +28,14 @@ console.log(post);
 
     <div class="release">
         <div class="left">
-            <img src={"../../img/" + post.img} alt="release picture"/>
+            <img src={"../../img/" + post['img']} alt="release picture"/>
         </div>
         <div class="right">
-            <h2>{post.name}</h2>
-            <p>Release date: {post.release_date}</p>
-            <p>Catalog: {post.catalog}</p>
-            <p><Fragment set:html={post.info}/></p>
-            <a href={post.link}><i class="fa-solid fa-cart-shopping"></i> Buy</a>
+            <h2>{post['name']}</h2>
+            <p>Release date: {post['release_date']}</p>
+            <p>Catalog: {post['catalog']}</p>
+            <p><Fragment set:html={post['info']}/></p>
+            <a href={post['link']}><i class="fa-solid fa-cart-shopping"></i> Buy</a>
         </div>
     </div>
 
