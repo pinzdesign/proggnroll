@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import ReleaseList from "../components/ReleaseList.astro";
+
+const data = await fetch("https://kdeksxgxvcivtikjqluf.supabase.co/rest/v1/releases", {
+	method: "GET",
+	headers: {
+		apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtkZWtzeGd4dmNpdnRpa2pxbHVmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDIyMDYzMTMsImV4cCI6MjAxNzc4MjMxM30.4YJVI0UCYSbR6QfEZ0S3S2gsvG1Ef8yViIHcyovLqgY"	
+	}
+}).then((res) => res.json());
+
+console.log(data);
+---
+
+<Layout title="Progg'N'Roll Records - Music Releases!">
+	<PageHeader></PageHeader>
+    <main>
+		{
+			data.map((release) => {
+				return <ReleaseList data={release}/>
+			})
+		}
+	</main>
+</Layout>
+
+<style>
+    main {
+        width: 80%;
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+</style>

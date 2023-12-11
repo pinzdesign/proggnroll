@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import NavigationMenu from '../../components/NavigationMenu.astro';
+
+export async function getStaticPaths() {
+  const data = await fetch('https://kdeksxgxvcivtikjqluf.supabase.co/rest/v1/releases',{
+        method: "GET",
+        headers: {
+            apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtkZWtzeGd4dmNpdnRpa2pxbHVmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDIyMDYzMTMsImV4cCI6MjAxNzc4MjMxM30.4YJVI0UCYSbR6QfEZ0S3S2gsvG1Ef8yViIHcyovLqgY"	
+        }
+}).then((response) => response.json());
+
+return data.map((release) => {
+    return {
+      params: { slug: release.slug },
+      props: { post: release },
+    };
+  });
+}
+const {post} = Astro.props;
+
+console.log(post);
+---
+
+<Layout title="Progg'N'Roll Records!">
+	<PageHeader></PageHeader>
+
+    <div class="release">
+        <div class="left">
+            <img src={"../../img/" + post.img} alt="release picture"/>
+        </div>
+        <div class="right">
+            <h2>{post.name}</h2>
+            <p>Release date: {post.release_date}</p>
+            <p>Catalog: {post.catalog}</p>
+            <p><Fragment set:html={post.info}/></p>
+            <a href={post.link}><i class="fa-solid fa-cart-shopping"></i> Buy</a>
+        </div>
+    </div>
+
+</Layout>
+
+<style>
+
+</style>

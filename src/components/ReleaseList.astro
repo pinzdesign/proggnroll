@@ -1,0 +1,50 @@
+---
+const {data} = Astro.props;
+
+/*const parseDesc = data.description;*/
+
+//console.log(data);
+---
+
+
+<div class="release_box">
+    <a href="">
+    <div class="release_img">
+        <img src={"../img/releases/" + data.img} alt="release image">
+    </div>
+    <div class="release_info">
+        <p class="release_name">{data.name}</p>
+        <p>{data.artist}</p>
+    </div>
+    </a>
+</div>
+
+
+<style>
+    .release_box {
+        margin: 30px;
+    }
+    .release_img img {
+        width: 250px;
+        height: 250px;
+        transition: all .5s;
+    }
+    .release_info {
+        text-align: center;
+    }
+    p {
+        margin-top: 10px;
+    }
+    .release_name {
+        font-family: 'Monomaniac One', sans-serif;
+        letter-spacing: 3px;
+        text-shadow: 0px 0px 3px darkgray;
+    }
+    .release_img img:hover {
+        box-shadow: 0px 0px 30px darkgray;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+</style>
