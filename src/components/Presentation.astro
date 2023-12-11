@@ -5,11 +5,11 @@
 <div class="wrapper">
     <div class="presentation">
         <div class="left">
-            <img src="../../img/artists/ascent.webp" alt="new artist presentation">
-        </div>
-        <div class="right">
             <p>Bojan aka Ascent is a progressive/psychedelic trance producer from Serbia! He had a lot of music released at other labels, and played at many gigs in Europe and beyond, and now we are proud to announce his fresh release at our label. Be sure to check out more info by click artist page link below.</p>
             <p><a href="artists/ascent.html">Read More...</a></p>
+        </div>
+        <div class="right">
+            <img src="../../img/artists/ascent.jpg" alt="new artist presentation">
         </div>
     </div>
 </div>
@@ -17,5 +17,43 @@
 <style>
     .wrapper {
         background-color: #1a1a1a;
+        margin: 30px auto;
+    }
+    .presentation {
+        width: 80%;
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 30px;
+    }
+    .left {
+        text-align: right;
+        font-size: 22px;
+        line-height: 40px;
+        padding: 75px 0px;
+    }
+    .right {
+        padding: 75px 0px;
+    }
+    .right img {
+        width: 350px;
+    }
+    p {
+        margin-bottom: 30px;
+    }
+    a {
+        width: fit-content;
+        display: block;
+        padding: 15px 30px;
+        background-color: #1F3345;
+        color: white;
+        text-decoration: none;
+        float: right;
+        transition: all .5s;
+    }
+    a:hover {
+        color: black;
+        background-color: #3771A6;
     }
 </style>
