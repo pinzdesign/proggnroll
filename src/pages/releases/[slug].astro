@@ -34,7 +34,7 @@ console.log(post);
             <h2>{post.name}</h2>
             <p>Release date: {post.release_date}</p>
             <p>Catalog: {post.catalog}</p>
-            <p><Fragment set:html={parseDesc}/></p>
+            <p><Fragment set:html={post.info}/></p>
             <a href={post.link}><i class="fa-solid fa-cart-shopping"></i> Buy</a>
         </div>
     </div>

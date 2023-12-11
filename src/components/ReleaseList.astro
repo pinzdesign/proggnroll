@@ -1,14 +1,14 @@
 ---
 const {data} = Astro.props;
 
-const parseDesc = data.info;
+const parseInfo = data.info;
 
 console.log(data);
 ---
 
 
 <div class="release_box">
-    <a href={data.slug}>
+    <a href={"releases/" + data.slug}>
     <div class="release_img">
         <img src={"../img/releases/" + data.img} alt="release image">
     </div>
