@@ -4,16 +4,14 @@
 
 <div class="wrapper">
     <div class="left">
-        Addressway 123<br>
-        Srmska Mitrovica, Serbia<br>
-        tlf: +11 34 54 65 76<br>
-        mail@box.com
+        <p>Kruševac, Serbia</p>
+        <p><a class="email" href="mailto:progg.n.roll.records@gmail.com ">progg.n.roll.records@gmail.com </a></p>
+        <p class="madeby">Made by Ivan Popov as part of KEA multimediadesigner examination project.</p>
     </div>
     <div class="right">
-        @facebook<br>
-        @spotify<br>
-        @soundcloud<br>
-        @psyshop<br>
+        <p><a href="https://www.facebook.com/progg.roll.9"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
+        <p><a href="https://www.instagram.com/progg.n.roll.records/"><i class="fa-brands fa-square-instagram"></i> Instagram</a></p>
+        <p><a href="https://soundcloud.com/progg_n_roll"><i class="fa-brands fa-soundcloud"></i> Soundcloud</a></p>
     </div>
 </div>
 
@@ -22,15 +20,38 @@
         margin: 0px auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 30px;
     }
     .left {
         background-color: #1F3345;
         text-align: right;
-        padding: 30px;
+        padding: 15px;
     }
     .right {
         background-color: black;
-        padding: 30px;
+        padding: 15px;
+    }
+    p {
+        font-size: 20px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    .madeby {
+        margin-top: 30px;
+        font-size: 8px;
+        color: lightgray;
+    }
+    @media screen and (max-width: 980px) {
+        .wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+    @media screen and (max-width: 420px) {
+        .email {
+            font-size: 14px;
+        }
     }
 </style>

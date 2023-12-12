@@ -61,4 +61,12 @@ import NavigationMenu from "./NavigationMenu.astro";
     .newest_img:hover {
         transform: skew(-0.06turn, 18deg);
     }
+    @media screen and (max-width: 980px) {
+        header {
+            height: 20vh;
+        }
+        .newest_box {
+            display: none;
+        }
+    }
 </style>

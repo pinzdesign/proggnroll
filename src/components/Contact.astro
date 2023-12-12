@@ -5,17 +5,40 @@
 <div class="wrapper">
     <div class="contact">
         <div class="left">
-            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1465820317&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/progg_n_roll" title="Progg&#x27;N&#x27;Roll Records" target="_blank" style="color: #cccccc; text-decoration: none;">Progg&#x27;N&#x27;Roll Records</a> · <a href="https://soundcloud.com/progg_n_roll/sets/pnrcd001-psychedelic-traveling" title="Psychedelic Traveling V. 2, Compiled By Ascent (Previews)" target="_blank" style="color: #cccccc; text-decoration: none;">Psychedelic Traveling V. 2, Compiled By Ascent (Previews)</a></div>
+            <iframe height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1465820317&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/progg_n_roll" title="Progg&#x27;N&#x27;Roll Records" target="_blank" style="color: #cccccc; text-decoration: none;">Progg&#x27;N&#x27;Roll Records</a> · <a href="https://soundcloud.com/progg_n_roll/sets/pnrcd001-psychedelic-traveling" title="Psychedelic Traveling V. 2, Compiled By Ascent (Previews)" target="_blank" style="color: #cccccc; text-decoration: none;">Psychedelic Traveling V. 2, Compiled By Ascent (Previews)</a></div>
         </div>
         <div class="right">
-            <!--form>
-                
-            </form-->
+            <h4>Contact</h4>
+            <p>If you have any questions, or perhaps a demo you would like us to check, please feel free to use the form below, and we will try to answer your request as soon as possible.</p>
+            <form>
+                <label for="contact_name">Name</label>
+                <input type="text" name="contact_name" required>
+                <label for="contact_email">E-mail</label>
+                <input type="email" name="contact_email" required>
+                <label for="contact_msg">Message</label>
+                <textarea></textarea>
+                <input type="submit" value="Send">
+            </form>
         </div>
     </div>
 </div>
 
 <style>
+    h4 {
+        font-family: 'Monomaniac One', sans-serif;
+        font-size: 24px;
+        margin-bottom: 20px;
+        letter-spacing: 5px;
+    }
+    p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        letter-spacing: 3px;
+        line-height: 32px;
+    }
+    iframe {
+        width: 100%;
+    } 
     .wrapper {
         background-color: #1a1a1a;
     }
@@ -29,5 +52,42 @@
     }
     .left, .right {
         padding: 30px 0px;
+    }
+    textarea {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 20px;
+        background-color: black;
+    }
+    label, input, textarea {
+        display: block;
+        color: white;
+    }
+    label {
+        font-size: 12px;
+    }
+    input {
+        width: calc(100% - 34px);
+        padding: 15px;
+        margin-bottom: 20px;
+        background-color: black;
+        border: 2px solid white;
+    }
+    input[type=submit] {
+        width: 50%;
+        background-color: #1F3345;
+        color: white;
+        font-size: 22px;
+        border: 0;
+    }
+    @media screen and (max-width: 980px) {
+        .contact {
+            grid-template-columns: 1fr;
+        }
+    }
+    @media screen and (max-width: 420px) {
+        .left {
+            display: none;
+        }
     }
 </style>

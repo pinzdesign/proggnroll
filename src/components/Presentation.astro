@@ -56,4 +56,34 @@
         color: black;
         background-color: #3771A6;
     }
+    @media screen and (max-width: 980px) {
+        .presentation {
+            grid-template-columns: 1fr;
+        }
+        .left {
+            text-align: left;
+            padding-bottom: 30px;
+            padding-top: 0;
+        }
+        .right {
+            order: -1;
+            padding-top: 30px;
+        }
+        .right img {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 420px) {
+        .email {
+            font-size: 14px;
+        }
+        .left {
+            font-size: 18px;
+            padding-top: 0;
+            padding-bottom: 30px;
+        }
+        .right {
+            padding-bottom: 0;
+        }
+    }
 </style>
