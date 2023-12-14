@@ -7,11 +7,12 @@ import NavigationMenu from "./NavigationMenu.astro";
     <div class="banner">
         <div class="newest_box">
             <div class="newest_caption">
-                <h2>Meaning of Life</h2>
-                <h3>liluzio</h3>
+                <h2>Under Pressure</h2>
+                <h3>Pudova</h3>
+                <a href="music/under-pressure">Check it out</a>
             </div>
             <div class="newest_img">
-                <img src="../../img/cover1.jpg" alt="newest_release">
+                <img src="../../img/releases/under_pressure.webp" alt="newest_release">
             </div>
         </div>
     </div>
@@ -25,10 +26,9 @@ import NavigationMenu from "./NavigationMenu.astro";
         background-size: cover;
         background-position: bottom left;
     }
-    .banner {
-    }
     h2 {
-        font-size: 30px;
+        font-size: 22px;
+        margin-bottom: 20px;
         font-family: 'Monomaniac One', sans-serif;
         letter-spacing: 25px;
         text-shadow: 1px 1px 1px black;
@@ -42,7 +42,7 @@ import NavigationMenu from "./NavigationMenu.astro";
     .newest_box {
         margin: 200px auto;
         display: flex;
-        gap: 30px;
+        gap: 50px;
         justify-content: center;
         align-items: center;
         text-align: right;
@@ -60,6 +60,22 @@ import NavigationMenu from "./NavigationMenu.astro";
     }
     .newest_img:hover {
         transform: skew(-0.06turn, 18deg);
+    }
+    a {
+        display: block;
+        width: fit-content;
+        padding: 15px 30px;
+        color: white;
+        background-color: #1F3345;
+        text-decoration: none;
+        float: right;
+        margin-top: 30px;
+        margin-right: 25px;
+        transition: all .5s;
+    }
+    a:hover {
+        background-color: #3771A6;
+        color: black;
     }
     @media screen and (max-width: 980px) {
         header {

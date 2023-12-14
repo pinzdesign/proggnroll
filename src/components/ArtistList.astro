@@ -1,0 +1,110 @@
+---
+const {data} = Astro.props;
+
+console.log(data);
+
+function truncate(str, maxlength) {
+  return (str.length > maxlength) ?
+    str.slice(0, maxlength - 1) + '…</p>' : str;
+}
+
+const bioShort = truncate(data.bio, 100);
+---
+
+
+<div class="artist_box">
+    <div class="artist_img">
+        <img src={"../img/artists/" + data.img} alt="artist image">
+    </div>
+    <div class="artist_info">
+        <p class="artist_name">{data.name}</p>
+        <p>{data.dj_name}</p>
+        <div class="bio_wrap">
+            <Fragment set:html={bioShort} />
+        </div>
+        <p class="links">
+            {data.link_fb != null && <a class="link_btn" href={data.link_fb}><i class="fa-brands fa-facebook"></i> Facebook</a>}
+            <a class="link_btn" href={data.link_sc}><i class="fa-brands fa-soundcloud"></i> Soundcloud</a>
+            <a class="link_btn readmore" href={data.slug}><i class="fa-brands fa-soundcloud"></i> Read more...</a>
+        </p>
+    </div>
+</div>
+
+<style>
+    .artist_box {
+        border: 2px solid #1a1a1a;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding: 30px;
+        gap: 30px;
+        transition: all .5s;
+    }
+    .artist_box:hover {
+        border: 2px solid white;
+    }
+    .artist_img img {
+        width: 100%;
+        transition: all .5s;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    .bio_wrap {
+        margin-bottom: 15px;
+        margin-top: 45px;
+        font-size: 14px;
+    }
+    .artist_name {
+        font-family: 'Monomaniac One', sans-serif;
+        letter-spacing: 3px;
+        text-shadow: 0px 0px 3px darkgray;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    .links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .link_btn {
+        font-size: 12px;
+        display: block;
+        padding: 15px 15px;
+        background-color: #1F3345;
+        transition: all .5s;
+    }
+    .link_btn:hover {
+        background: #3771A6;
+    }
+    .readmore {
+        background-color: #2B1F45;
+    }
+    .readmore:hover {
+        background-color: #5437A6;
+    }
+    @media screen and (max-width: 980px) {
+        .artist_box {
+            grid-template-columns: 1fr;
+        }
+        .artist_img img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    @media screen and (max-width: 1560px) {
+        .links {
+            grid-template-columns: 1fr;
+        }
+        .artist_img img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    @media screen and (max-width:420px) {
+        .links {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
