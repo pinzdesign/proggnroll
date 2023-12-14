@@ -15,6 +15,15 @@
         </ul>
     </div>
 </div>
+<div id="burger_menu_btn"><i class="fa-solid fa-bars"></i></div>
+<div id="burger_menu">
+    <ul>
+        <li><a href="https://remarkable-salmiakki-5256c0.netlify.app/index.html">Home</a></li>
+        <li><a href="https://remarkable-salmiakki-5256c0.netlify.app/music.html">Music</a></li>
+        <li><a href="https://remarkable-salmiakki-5256c0.netlify.app/artists.html">Artists</a></li>
+        <li><a href="https://remarkable-salmiakki-5256c0.netlify.app/contact.html">Contact</a></li>
+    </ul>
+</div>
 
 <style>
     .navmenu_wrap {
@@ -47,9 +56,59 @@
         color: magenta;
         opacity: 1;
     }
+    #burger_menu {
+        position: fixed;
+        top: -360px;
+        text-align: center;
+        width: calc(100% - 40px);
+        transition: all .5s;
+        padding: 20px;
+        background-color: black;
+    }
+    #burger_menu ul {
+        list-style-type: none;
+    }
+    #burger_menu a {
+        display: block;
+        width: 100%;
+        padding: 15px 0px;
+        color: white;
+        background-color: #1F3345;
+        text-decoration: none;
+        margin-bottom: 10px;
+        transition: all .5s;
+    }
+    #burger_menu a:hover {
+        background-color: #3771A6;
+        color: black;
+    }
+    #burger_menu_btn {
+        font-size: 30px;
+        display: none;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+    .visible {
+        top: -360px;
+    }
     @media screen and (max-width: 980px) {
         .navmenu {
             display: none;
         }
+        #burger_menu_btn {
+            display: block;
+        }
+        .visible {
+            top: 60px !important;
+        }
     }
 </style>
+
+<script>
+    function toggleMenu() {
+        document.querySelector("#burger_menu").classList.toggle("visible");
+    }
+    document.querySelector("#burger_menu_btn").addEventListener("click", toggleMenu);
+</script>
