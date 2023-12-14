@@ -37,4 +37,14 @@ console.log(data);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+	@media screen and (max-width: 980px) {
+		main {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	@media screen and (max-width: 420px) {
+		main {
+			grid-template-columns: 1fr;
+		}
+	}
 </style>

@@ -22,11 +22,19 @@
         width: 80%;
         margin: 30px auto;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         align-items: center;
         justify-content: space-evenly;
+        gap: 50px;
     }
     .partner_box img {
-        width: 100px;
+        width: 100%;
+        max-width: 100px;
     }
+    @media screen and (max-width: 420px) {
+		.wrapper {
+            display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
 </style>
