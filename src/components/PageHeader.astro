@@ -46,7 +46,6 @@ import NavigationMenu from "./NavigationMenu.astro";
         justify-content: center;
         align-items: center;
         text-align: right;
-        opacity: 0;
     }
     .newest_img img {
         width: 150px;
@@ -87,10 +86,3 @@ import NavigationMenu from "./NavigationMenu.astro";
         }
     }
 </style>
-
-<script>
-    document.onload = function() {
-        console.log("loaded");
-        document.querySelector("#newest_box").style.opacity = 1;
-    }
-</script>
