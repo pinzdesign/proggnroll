@@ -87,18 +87,14 @@ console.log(post);
         margin-bottom: 30px;
     }
     .links {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
     }
     @media screen and (max-width: 420px) {
         .artist {
             grid-template-columns: 1fr;
         }
         .links {
-            grid-template-columns: 1fr;
-        }
-        a {
-            width: 100%;
+            flex-wrap: nowrap;
         }
     }
 </style>
