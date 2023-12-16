@@ -11,7 +11,7 @@
             <li><a href="https://remarkable-salmiakki-5256c0.netlify.app/index.html">Home</a></li>
             <li><a href="https://remarkable-salmiakki-5256c0.netlify.app/music.html">Music</a></li>
             <li><a href="https://remarkable-salmiakki-5256c0.netlify.app/artists.html">Artists</a></li>
-            <li><a href="https://remarkable-salmiakki-5256c0.netlify.app/contact.html">Contact</a></li>
+            <li><a onclick="scrollToAnchor('#anchor_contact');" href="#">Contact</a></li>
         </ul>
     </div>
 </div>
@@ -21,7 +21,7 @@
         <li><a href="https://remarkable-salmiakki-5256c0.netlify.app/index.html">Home</a></li>
         <li><a href="https://remarkable-salmiakki-5256c0.netlify.app/music.html">Music</a></li>
         <li><a href="https://remarkable-salmiakki-5256c0.netlify.app/artists.html">Artists</a></li>
-        <li><a href="https://remarkable-salmiakki-5256c0.netlify.app/contact.html">Contact</a></li>
+        <li><a onclick="scrollToAnchor('#anchor_contact');" href="#">Contact</a></li>
     </ul>
 </div>
 
@@ -106,7 +106,12 @@
     }
 </style>
 
-<script>
+<script is:inline>
+    function scrollToAnchor(element) {
+        event.preventDefault();
+        document.querySelector(element).scrollIntoView({behavior: "smooth"});
+    }
+
     function toggleMenu() {
         document.querySelector("#burger_menu").classList.toggle("visible");
     }

@@ -7,6 +7,7 @@ import Partners from '../components/Partners.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 import ReleaseListFront from '../components/ReleaseListFront.astro';
+import Newsletter from '../components/Newsletter.astro';
 
 const data = await fetch("https://kdeksxgxvcivtikjqluf.supabase.co/rest/v1/releases?limit=4", {
 	method: "GET",
@@ -32,6 +33,7 @@ console.log(data);
 	<Partners></Partners>
 	<Contact></Contact>
 	<Footer></Footer>
+	<Newsletter></Newsletter>
 </Layout>
 
 <style>

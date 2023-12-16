@@ -1,0 +1,66 @@
+---
+
+---
+
+<div class="newsletter_box" id="newsletter_box">
+    <h3 id="show_newsletter"><i class="fa-solid fa-envelope"></i> Newsletter</h3>
+    <p>Subscribe to our newsletter to always stay in touch, and get updated with latest news and releases.</p>
+    <form>
+        <label for="newsletter_email"></label>
+        <input type="email" name="newsletter_email" id="newsletter_email">
+        <input type="submit" value="Subscribe">
+    </form>
+</div>
+
+<style>
+    .newsletter_box {
+        position: fixed;
+        bottom: -250px;
+        right: 30px;
+        background-color: #2b1f45;
+        width: 300px;
+        padding: 30px;
+        transition: all .5s;
+    }
+    .newsletter_box_show {
+        bottom: 30px;
+    }
+    h3 {
+        cursor: pointer;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+    }
+    p {
+        margin: 15px 0px;
+        letter-spacing: 1px;
+    }
+    input {
+        width: calc(100% - 30px);
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    input[type=submit] {
+        background-color: #1F3345;
+        width: 100%;
+        border: 0;
+        transition: all .5s;
+        font-size: 20px;
+        color: white;
+        letter-spacing: 3px;
+    }
+    input[type=submit]:hover {
+        background-color: #3771A6;
+        color: black;
+    }
+    @media screen and (max-width: 600px) {
+        .newsletter_box { display: none; }
+    }
+</style>
+
+<script>
+    function showNewsletter() {
+        document.querySelector("#newsletter_box").classList.toggle("newsletter_box_show");
+    }
+
+    document.querySelector("#show_newsletter").addEventListener("click", showNewsletter);
+</script>
