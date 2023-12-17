@@ -34,10 +34,11 @@ console.log(post);
         </div>
         <div class="right">
             <h2>{post['name']}</h2>
+            <h2><a href={"https://remarkable-salmiakki-5256c0.netlify.app/artists/" + post['artist']}>{post['artist']}</a></h2>
             <p>Release date: {post['release_date']}</p>
             <p>Catalog: {post['catalog']}</p>
             <p><Fragment set:html={post['info']}/></p>
-            <a href={post['link']}><i class="fa-solid fa-cart-shopping"></i> Buy</a>
+            <a class="buy" href={post['link']}><i class="fa-solid fa-cart-shopping"></i> Buy</a>
         </div>
     </div>
     <Partners></Partners>
@@ -60,6 +61,10 @@ console.log(post);
         width: 100%;
     }
     a {
+        color: white;
+        text-decoration: none;
+    }
+    .buy {
         display: block;
         width: fit-content;
         padding: 15px 30px;
@@ -70,7 +75,7 @@ console.log(post);
         margin-right: 25px;
         transition: all .5s;
     }
-    a:hover {
+    .buy:hover {
         background-color: #3771A6;
         color: black;
     }
